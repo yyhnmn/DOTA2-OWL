@@ -115,6 +115,9 @@
         <Class IRI="#Equipment_Item"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Evasion"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Farming"/>
     </Declaration>
     <Declaration>
@@ -140,6 +143,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Health"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_Regen"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Hero"/>
@@ -188,6 +194,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Mana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mana_Regen"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Map"/>
@@ -269,6 +278,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status_Resist"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Strength"/>
@@ -443,6 +455,10 @@
         <Class IRI="#Basic_Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Evasion"/>
+        <Class IRI="#Defense_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Farming"/>
         <Class IRI="#Gameplay"/>
     </SubClassOf>
@@ -473,6 +489,10 @@
     <SubClassOf>
         <Class IRI="#Health"/>
         <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_Regen"/>
+        <Class IRI="#Defense_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hero"/>
@@ -539,6 +559,10 @@
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Mana_Regen"/>
+        <Class IRI="#Attack_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Map"/>
         <Class IRI="#World_Mechanic"/>
     </SubClassOf>
@@ -548,7 +572,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mechanic"/>
-        <Class IRI="#Gaming_content"/>
+        <Class IRI="#Non-gaming_content"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Melee_Creep"/>
@@ -643,6 +667,10 @@
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Status_Resist"/>
+        <Class IRI="#Defense_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Strength"/>
         <Class IRI="#Attribute"/>
     </SubClassOf>
@@ -690,6 +718,13 @@
         <Class IRI="#World_Mechanic"/>
         <Class IRI="#Mechanic"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Armor"/>
+        <Class IRI="#Evasion"/>
+        <Class IRI="#Health_Regen"/>
+        <Class IRI="#Magic_Resist"/>
+        <Class IRI="#Status_Resist"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Audio"/>
         <Class IRI="#Display"/>
