@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/22321/ontologies/2020/3/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/22321/ontologies/2020/3/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/22321/ontologies/2020/3/untitled-ontology-5"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Accessorie_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Affiliated_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ancient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anti-Mage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Arcane_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Armor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Armor_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Artifact_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack_Range"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack_Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attribute_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BackPack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Barrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Base_Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Basic_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bounty_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consumable_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cosmetic_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Defense_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Display"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Double_damage_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DragonKnight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrowRanger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Earthshaker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Effigy_Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmberSpirit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipment_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Farming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fountain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Mode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gameplay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gaming_content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ganking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gold"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Haste_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotkey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Illusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Illusion_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intelligence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Invisibility_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Invoker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Item_Slot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Juggernaut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jungle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jungling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Magic_Resist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Magical_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Map"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matchmaking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Melee_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Miscellaneous_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movement_Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neutral_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neutral_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neutral_Item_Slot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-gaming_content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Normal_Item_Slot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oracle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Outpost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phoenix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Power-up_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pushing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ranged_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regeneration_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#River"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Secret_Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Setting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spell_Amp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Summon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Support_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Talent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Upgrade_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VoidSpirit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weapon_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#World_Mechanic"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accessorie_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Affiliated_Creep"/>
+        <Class IRI="#Creep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agility"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ancient"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anti-Mage"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arcane_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Armor"/>
+        <Class IRI="#Defense_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Armor_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Artifact_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attack_Mechanic"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attack_Range"/>
+        <Class IRI="#Attack_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attack_Speed"/>
+        <Class IRI="#Attack_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attribute"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attribute_Item"/>
+        <Class IRI="#Basic_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BackPack"/>
+        <Class IRI="#Item_Slot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Barrack"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Base_Shop"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Basic_Item"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bounty_Rune"/>
+        <Class IRI="#Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Consumable_Item"/>
+        <Class IRI="#Basic_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cosmetic_Item"/>
+        <Class IRI="#Non-gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Creep"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Damage"/>
+        <Class IRI="#Attack_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Defense_Mechanic"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Display"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Double_damage_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DragonKnight"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrowRanger"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Earthshaker"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Effigy_Building"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmberSpirit"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment_Item"/>
+        <Class IRI="#Basic_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Farming"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fountain"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Mode"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gameplay"/>
+        <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ganking"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gold"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Haste_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hero"/>
+        <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotkey"/>
+        <Class IRI="#Setting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Illusion"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Illusion_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intelligence"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Invisibility_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Invoker"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Item"/>
+        <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Item_Slot"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Juggernaut"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jungle"/>
+        <Class IRI="#Map"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jungling"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lane"/>
+        <Class IRI="#Map"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Magic_Resist"/>
+        <Class IRI="#Defense_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Magical_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mana"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Map"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matchmaking"/>
+        <Class IRI="#Non-gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanic"/>
+        <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Melee_Creep"/>
+        <Class IRI="#Affiliated_Creep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Miscellaneous_Item"/>
+        <Class IRI="#Basic_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movement_Speed"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neutral_Creep"/>
+        <Class IRI="#Creep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neutral_Item"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neutral_Item_Slot"/>
+        <Class IRI="#Item_Slot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Normal_Item_Slot"/>
+        <Class IRI="#Item_Slot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oracle"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Outpost"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phoenix"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Power-up_Rune"/>
+        <Class IRI="#Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pushing"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ranged_Creep"/>
+        <Class IRI="#Affiliated_Creep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regeneration_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#River"/>
+        <Class IRI="#Map"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role"/>
+        <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rune"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Secret_Shop"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Setting"/>
+        <Class IRI="#Non-gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spell"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spell_Amp"/>
+        <Class IRI="#Attack_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Status"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strength"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Summon"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Support_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Talent"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tower"/>
+        <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tree"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit_Mechanic"/>
+        <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Upgrade_Item"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VoidSpirit"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weapon_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#World_Mechanic"/>
+        <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Audio"/>
+        <Class IRI="#Display"/>
+        <Class IRI="#Hotkey"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cosmetic_Item"/>
+        <Class IRI="#Gaming_content"/>
+        <Class IRI="#Matchmaking"/>
+        <Class IRI="#Setting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Gaming_content"/>
+        <Class IRI="#Non-gaming_content"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Audio</IRI>
+        <Literal>Audio setting of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cosmetic_Item</IRI>
+        <Literal>Customized visual elements with Dota2. Purely graphical and do not affect Gaming Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Display</IRI>
+        <Literal>Video display of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotkey</IRI>
+        <Literal>Hotkeys setting of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Matchmaking</IRI>
+        <Literal>The automated system that finds and matches players together</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Setting</IRI>
+        <Literal>Game settings allow users to change display, audio, and hotkeys.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
