@@ -572,7 +572,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mechanic"/>
-        <Class IRI="#Non-gaming_content"/>
+        <Class IRI="#Gaming_content"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Melee_Creep"/>
