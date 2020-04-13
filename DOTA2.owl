@@ -1226,6 +1226,11 @@
         <IRI>#Turbo</IRI>
         <Literal>A shorter version of All Pick, with increased XP&amp;gold.</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Unranked</IRI>
+        <Literal>Nomal games without showing players&apos; rankings.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
