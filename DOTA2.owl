@@ -19,6 +19,9 @@
         <Class IRI="#Affiliated_Creep"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#After-game_Analysis"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Agility"/>
     </Declaration>
     <Declaration>
@@ -26,6 +29,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Anti-Mage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apex"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Arcane_Rune"/>
@@ -70,10 +76,19 @@
         <Class IRI="#Basic_Item"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BootsOfSpeed"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Bounty_Rune"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Buckler"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChainMail"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Consumable_Item"/>
@@ -83,6 +98,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crystalys"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Damage"/>
@@ -115,6 +133,9 @@
         <Class IRI="#Equipment_Item"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#EssenceRing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Evasion"/>
     </Declaration>
     <Declaration>
@@ -140,6 +161,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Haste_Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealingSalve"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Health"/>
@@ -169,6 +193,9 @@
         <Class IRI="#Invoker"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#IronBranch"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Item"/>
     </Declaration>
     <Declaration>
@@ -185,6 +212,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Lane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagicWand"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Magic_Resist"/>
@@ -226,6 +256,9 @@
         <Class IRI="#Neutral_Item_Slot"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#NinjaGear"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Non-gaming_content"/>
     </Declaration>
     <Declaration>
@@ -236,6 +269,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Outpost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaladinSword"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Phoenix"/>
@@ -259,7 +295,13 @@
         <Class IRI="#Role"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RoyalJelly"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Rune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Satanic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Secret_Shop"/>
@@ -295,6 +337,21 @@
         <Class IRI="#Talent"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Tier1Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tier2Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tier3Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tier4Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tier5Item"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Time"/>
     </Declaration>
     <Declaration>
@@ -310,6 +367,9 @@
         <Class IRI="#Upgrade_Item"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#VanGuard"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VoidSpirit"/>
     </Declaration>
     <Declaration>
@@ -317,6 +377,18 @@
     </Declaration>
     <Declaration>
         <Class IRI="#World_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aghanim&apos;sScepter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMechanic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Accessorie_Item"/>
@@ -327,6 +399,10 @@
         <Class IRI="#Creep"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#After-game_Analysis"/>
+        <Class IRI="#Non-gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Agility"/>
         <Class IRI="#Attribute"/>
     </SubClassOf>
@@ -337,6 +413,10 @@
     <SubClassOf>
         <Class IRI="#Anti-Mage"/>
         <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apex"/>
+        <Class IRI="#Tier5Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Arcane_Rune"/>
@@ -395,12 +475,24 @@
         <Class IRI="#Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BootsOfSpeed"/>
+        <Class IRI="#Miscellaneous_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Bounty_Rune"/>
         <Class IRI="#Rune"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Buckler"/>
+        <Class IRI="#Support_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Building"/>
         <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChainMail"/>
+        <Class IRI="#Equipment_Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Consumable_Item"/>
@@ -413,6 +505,10 @@
     <SubClassOf>
         <Class IRI="#Creep"/>
         <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crystalys"/>
+        <Class IRI="#Weapon_Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Damage"/>
@@ -455,6 +551,10 @@
         <Class IRI="#Basic_Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EssenceRing"/>
+        <Class IRI="#Tier2Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Evasion"/>
         <Class IRI="#Defense_Mechanic"/>
     </SubClassOf>
@@ -487,6 +587,10 @@
         <Class IRI="#Power-up_Rune"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#HealingSalve"/>
+        <Class IRI="#Consumable_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Health"/>
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
@@ -497,6 +601,27 @@
     <SubClassOf>
         <Class IRI="#Hero"/>
         <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMechanic"/>
+            <Class IRI="#Mechanic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnitMechanic"/>
+            <Class IRI="#Unit_Mechanic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hero"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWorldMechanic"/>
+            <Class IRI="#World_Mechanic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hotkey"/>
@@ -523,8 +648,19 @@
         <Class IRI="#Hero"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#IronBranch"/>
+        <Class IRI="#Attribute_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Item"/>
         <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWorldMechanic"/>
+            <Class IRI="#World_Mechanic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Item_Slot"/>
@@ -545,6 +681,10 @@
     <SubClassOf>
         <Class IRI="#Lane"/>
         <Class IRI="#Map"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagicWand"/>
+        <Class IRI="#Accessorie_Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Magic_Resist"/>
@@ -599,6 +739,10 @@
         <Class IRI="#Item_Slot"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#NinjaGear"/>
+        <Class IRI="#Tier4Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Normal_Item_Slot"/>
         <Class IRI="#Item_Slot"/>
     </SubClassOf>
@@ -609,6 +753,10 @@
     <SubClassOf>
         <Class IRI="#Outpost"/>
         <Class IRI="#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaladinSword"/>
+        <Class IRI="#Tier3Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Phoenix"/>
@@ -639,8 +787,16 @@
         <Class IRI="#Gameplay"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RoyalJelly"/>
+        <Class IRI="#Tier1Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Rune"/>
         <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satanic"/>
+        <Class IRI="#Artifact_Item"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Secret_Shop"/>
@@ -656,7 +812,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spell"/>
-        <Class IRI="#World_Mechanic"/>
+        <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spell_Amp"/>
@@ -687,6 +843,26 @@
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Tier1Item"/>
+        <Class IRI="#Neutral_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tier2Item"/>
+        <Class IRI="#Neutral_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tier3Item"/>
+        <Class IRI="#Neutral_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tier4Item"/>
+        <Class IRI="#Neutral_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tier5Item"/>
+        <Class IRI="#Neutral_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Time"/>
         <Class IRI="#World_Mechanic"/>
     </SubClassOf>
@@ -707,6 +883,10 @@
         <Class IRI="#Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#VanGuard"/>
+        <Class IRI="#Armor_Item"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VoidSpirit"/>
         <Class IRI="#Hero"/>
     </SubClassOf>
@@ -718,6 +898,40 @@
         <Class IRI="#World_Mechanic"/>
         <Class IRI="#Mechanic"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aghanim&apos;sScepter"/>
+        <Class IRI="#Magical_Item"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Accessorie_Item"/>
+        <Class IRI="#Armor_Item"/>
+        <Class IRI="#Artifact_Item"/>
+        <Class IRI="#Magical_Item"/>
+        <Class IRI="#Support_Item"/>
+        <Class IRI="#Weapon_Item"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Affiliated_Creep"/>
+        <Class IRI="#Neutral_Creep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#After-game_Analysis"/>
+        <Class IRI="#Cosmetic_Item"/>
+        <Class IRI="#Matchmaking"/>
+        <Class IRI="#Setting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Agility"/>
+        <Class IRI="#Intelligence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Arcane_Rune"/>
+        <Class IRI="#Double_damage_Rune"/>
+        <Class IRI="#Haste_Rune"/>
+        <Class IRI="#Illusion_Rune"/>
+        <Class IRI="#Invisibility_Rune"/>
+        <Class IRI="#Regeneration_Rune"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Armor"/>
         <Class IRI="#Evasion"/>
@@ -726,20 +940,112 @@
         <Class IRI="#Status_Resist"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Attack_Mechanic"/>
+        <Class IRI="#Attribute"/>
+        <Class IRI="#Defense_Mechanic"/>
+        <Class IRI="#Health"/>
+        <Class IRI="#Item_Slot"/>
+        <Class IRI="#Mana"/>
+        <Class IRI="#Movement_Speed"/>
+        <Class IRI="#Status"/>
+        <Class IRI="#Talent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Attack_Range"/>
+        <Class IRI="#Attack_Speed"/>
+        <Class IRI="#Damage"/>
+        <Class IRI="#Mana_Regen"/>
+        <Class IRI="#Spell_Amp"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Attribute_Item"/>
+        <Class IRI="#Consumable_Item"/>
+        <Class IRI="#Equipment_Item"/>
+        <Class IRI="#Miscellaneous_Item"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Audio"/>
         <Class IRI="#Display"/>
         <Class IRI="#Hotkey"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Cosmetic_Item"/>
-        <Class IRI="#Gaming_content"/>
-        <Class IRI="#Matchmaking"/>
-        <Class IRI="#Setting"/>
+        <Class IRI="#BackPack"/>
+        <Class IRI="#Neutral_Item_Slot"/>
+        <Class IRI="#Normal_Item_Slot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Base_Shop"/>
+        <Class IRI="#Secret_Shop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Basic_Item"/>
+        <Class IRI="#Neutral_Item"/>
+        <Class IRI="#Upgrade_Item"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bounty_Rune"/>
+        <Class IRI="#Power-up_Rune"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Gaming_content"/>
         <Class IRI="#Non-gaming_content"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Hero"/>
+        <Class IRI="#Item"/>
+        <Class IRI="#Mechanic"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Jungle"/>
+        <Class IRI="#Lane"/>
+        <Class IRI="#River"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Melee_Creep"/>
+        <Class IRI="#Ranged_Creep"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+        <ObjectProperty IRI="#hasMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+        <ObjectProperty IRI="#hasMechanic"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMechanic"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMechanic"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMechanic"/>
+        <Class IRI="#Mechanic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+        <Class IRI="#Unit_Mechanic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+        <Class IRI="#World_Mechanic"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Audio</IRI>
@@ -757,6 +1063,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gaming_content</IRI>
+        <Literal>In-game content. Involving heroes,items and mechanics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Hotkey</IRI>
         <Literal>Hotkeys setting of the game</Literal>
     </AnnotationAssertion>
@@ -764,6 +1075,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Matchmaking</IRI>
         <Literal>The automated system that finds and matches players together</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Non-gaming_content</IRI>
+        <Literal>Non-in-game content, involving player community content, matchmaking methods and game settings</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
