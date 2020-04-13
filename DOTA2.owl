@@ -390,6 +390,27 @@
     <Declaration>
         <ObjectProperty IRI="#hasWorldMechanic"/>
     </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasItemFunction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlusAgility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlusAllAttributes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlusAttribute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlusIntelligence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlusStrength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IB"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Accessorie_Item"/>
         <Class IRI="#Upgrade_Item"/>
@@ -1004,6 +1025,15 @@
         <Class IRI="#Melee_Creep"/>
         <Class IRI="#Ranged_Creep"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#IronBranch"/>
+        <NamedIndividual IRI="#IB"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PlusAllAttributes"/>
+        <NamedIndividual IRI="#IB"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUnitMechanic"/>
         <ObjectProperty IRI="#hasMechanic"/>
@@ -1046,6 +1076,34 @@
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <Class IRI="#World_Mechanic"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PlusAgility"/>
+        <DataProperty IRI="#PlusAttribute"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PlusAllAttributes"/>
+        <DataProperty IRI="#PlusAttribute"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#HasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PlusIntelligence"/>
+        <DataProperty IRI="#PlusAttribute"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PlusStrength"/>
+        <DataProperty IRI="#PlusAttribute"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#HasItemFunction"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#HasItemFunction"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Audio</IRI>
