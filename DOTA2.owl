@@ -25,6 +25,9 @@
         <Class IRI="#Agility"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#All_Pick"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Ancient"/>
     </Declaration>
     <Declaration>
@@ -89,6 +92,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ChainMail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Consumable_Item"/>
@@ -283,7 +289,13 @@
         <Class IRI="#Pushing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Random_Draft"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Ranged_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ranked"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Regeneration_Rune"/>
@@ -293,6 +305,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role_queue"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RoyalJelly"/>
@@ -361,7 +376,13 @@
         <Class IRI="#Tree"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Turbo"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Unit_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unranked"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Upgrade_Item"/>
@@ -426,6 +447,10 @@
     <SubClassOf>
         <Class IRI="#Agility"/>
         <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#All_Pick"/>
+        <Class IRI="#Unranked"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ancient"/>
@@ -514,6 +539,10 @@
     <SubClassOf>
         <Class IRI="#ChainMail"/>
         <Class IRI="#Equipment_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Classic"/>
+        <Class IRI="#Ranked"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Consumable_Item"/>
@@ -792,8 +821,16 @@
         <Class IRI="#Gameplay"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Random_Draft"/>
+        <Class IRI="#Unranked"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Ranged_Creep"/>
         <Class IRI="#Affiliated_Creep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ranked"/>
+        <Class IRI="#Matchmaking"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Regeneration_Rune"/>
@@ -806,6 +843,10 @@
     <SubClassOf>
         <Class IRI="#Role"/>
         <Class IRI="#Gameplay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role_queue"/>
+        <Class IRI="#Ranked"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RoyalJelly"/>
@@ -896,8 +937,16 @@
         <Class IRI="#World_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Turbo"/>
+        <Class IRI="#Unranked"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Unit_Mechanic"/>
         <Class IRI="#Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unranked"/>
+        <Class IRI="#Matchmaking"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Upgrade_Item"/>
@@ -944,6 +993,11 @@
     <DisjointClasses>
         <Class IRI="#Agility"/>
         <Class IRI="#Intelligence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#All_Pick"/>
+        <Class IRI="#Random_Draft"/>
+        <Class IRI="#Turbo"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Arcane_Rune"/>
@@ -1008,6 +1062,10 @@
         <Class IRI="#Power-up_Rune"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Classic"/>
+        <Class IRI="#Role_queue"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Gaming_content"/>
         <Class IRI="#Non-gaming_content"/>
     </DisjointClasses>
@@ -1024,6 +1082,10 @@
     <DisjointClasses>
         <Class IRI="#Melee_Creep"/>
         <Class IRI="#Ranged_Creep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Ranked"/>
+        <Class IRI="#Unranked"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#IronBranch"/>
@@ -1106,6 +1168,11 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#All_Pick</IRI>
+        <Literal>Each player selects a hero from the entire hero pool.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Audio</IRI>
         <Literal>Audio setting of the game</Literal>
     </AnnotationAssertion>
@@ -1141,8 +1208,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Random_Draft</IRI>
+        <Literal>Each team takes turns selecting a hero from a shared pool of 50 random heros.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ranked</IRI>
+        <Literal>Ranked matchmaking allows players to earn a seasonal ranking, along with a badge that can be displayed next to the profile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Setting</IRI>
         <Literal>Game settings allow users to change display, audio, and hotkeys.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Turbo</IRI>
+        <Literal>A shorter version of All Pick, with increased XP&amp;gold.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
