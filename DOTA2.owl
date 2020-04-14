@@ -343,22 +343,40 @@
         <ObjectProperty IRI="#hasWorldMechanic"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#HasItemFunction"/>
+        <ObjectProperty IRI="#provideBonusAttribute"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#PlusAgility"/>
+        <ObjectProperty IRI="#sellItem"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#PlusAllAttributes"/>
+        <ObjectProperty IRI="#soldBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#hasItemFunction"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#PlusIntelligence"/>
+        <DataProperty IRI="#plusAgility"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#PlusStrength"/>
+        <DataProperty IRI="#plusAllAttributes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plusAttribute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plusIntelligence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plusStrength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provideArmor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provideHealthRegen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provideMoveSpeed"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Anti-Mage"/>
@@ -496,6 +514,13 @@
         <Class IRI="#Basic_Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Attribute_Item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#provideBonusAttribute"/>
+            <Class IRI="#Attribute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Audio"/>
         <Class IRI="#Setting"/>
     </SubClassOf>
@@ -608,27 +633,6 @@
         <Class IRI="#Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Hero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMechanic"/>
-            <Class IRI="#Mechanic"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Hero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasUnitMechanic"/>
-            <Class IRI="#Unit_Mechanic"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Hero"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasWorldMechanic"/>
-            <Class IRI="#World_Mechanic"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Hotkey"/>
         <Class IRI="#Setting"/>
     </SubClassOf>
@@ -655,8 +659,15 @@
     <SubClassOf>
         <Class IRI="#Item"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasWorldMechanic"/>
-            <Class IRI="#World_Mechanic"/>
+            <ObjectProperty IRI="#hasMechanic"/>
+            <Class IRI="#Mechanic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#soldBy"/>
+            <Class IRI="#Shop"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -788,6 +799,13 @@
         <Class IRI="#World_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Shop"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#sellItem"/>
+            <Class IRI="#Item"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Spell"/>
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
@@ -858,6 +876,20 @@
     <SubClassOf>
         <Class IRI="#Unit"/>
         <Class IRI="#Gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMechanic"/>
+            <Class IRI="#Mechanic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnitMechanic"/>
+            <Class IRI="#Unit_Mechanic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Unit_Mechanic"/>
@@ -1094,6 +1126,26 @@
         <Class IRI="#Magical_Item"/>
         <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
     </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideMoveSpeed"/>
+        <NamedIndividual IRI="#BootsOfSpeed"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideArmor"/>
+        <NamedIndividual IRI="#ChainMail"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <NamedIndividual IRI="#HealingSalve"/>
+        <Literal>50/s for 8s</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusAllAttributes"/>
+        <NamedIndividual IRI="#IronBranch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -1106,11 +1158,30 @@
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <ObjectProperty IRI="#hasMechanic"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#provideBonusAttribute"/>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sellItem"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#soldBy"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#sellItem"/>
+        <ObjectProperty IRI="#soldBy"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasUnitMechanic"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasWorldMechanic"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#sellItem"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMechanic"/>
@@ -1127,6 +1198,18 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#provideBonusAttribute"/>
+        <Class IRI="#Attribute_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sellItem"/>
+        <Class IRI="#Shop"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#soldBy"/>
+        <Class IRI="#Item"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMechanic"/>
@@ -1140,32 +1223,56 @@
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <Class IRI="#World_Mechanic"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#provideBonusAttribute"/>
+        <Class IRI="#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sellItem"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#soldBy"/>
+        <Class IRI="#Shop"/>
+    </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="#PlusAgility"/>
-        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#plusAgility"/>
+        <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#PlusAllAttributes"/>
-        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#plusAllAttributes"/>
+        <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#PlusAttribute"/>
-        <DataProperty IRI="#HasItemFunction"/>
+        <DataProperty IRI="#plusAttribute"/>
+        <DataProperty IRI="#hasItemFunction"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#PlusIntelligence"/>
-        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#plusIntelligence"/>
+        <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#PlusStrength"/>
-        <DataProperty IRI="#PlusAttribute"/>
+        <DataProperty IRI="#plusStrength"/>
+        <DataProperty IRI="#plusAttribute"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideArmor"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideMoveSpeed"/>
+        <DataProperty IRI="#hasItemFunction"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="#HasItemFunction"/>
+        <DataProperty IRI="#hasItemFunction"/>
         <Class IRI="#Item"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#HasItemFunction"/>
+        <DataProperty IRI="#hasItemFunction"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -1187,6 +1294,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Audio</IRI>
         <Literal>Audio setting of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Basic_Item</IRI>
+        <Literal>Basic items are low tier items that sold in base shops and secret shops. Basic items can be combined to be upgrade item</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1222,6 +1334,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Intelligence</IRI>
         <Literal>Intelligence is one of the three primary attributes with the theme of improving spell-casting. It grants mana, mana regeneration and spell damage amplification to every hero. Intelligence heroes also gain attack damage per point of intelligence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Item</IRI>
+        <Literal>Items are in-game equipments that provide heroes with bonus attributes and special abilities. They can be purchased from several shops on the game map. There are basic items, upgrade items and neutral items.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
