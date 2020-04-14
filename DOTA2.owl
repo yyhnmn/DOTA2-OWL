@@ -1168,8 +1168,18 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agility</IRI>
+        <Literal>Agility is one of the three primary attributes that grants movement and attack speed and armor to every hero. Agility heroes also gain attack damage per point of agility.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#All_Pick</IRI>
         <Literal>Each player selects a hero from the entire hero pool.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attribute</IRI>
+        <Literal>Baseline stats that increase with each level. Strength increases health, health regeneration and magic resistance, Agility increases armor, attack speed and move speed, Intelligence increases mana, mana regeneration, and spell amplification. All heroes are associated with one of three attributes, known as their Primary Attribute. Raising a hero&apos;s Primary Attribute also raises their physical attack damage. Attributes can also be increased by items and abilities.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1198,6 +1208,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Intelligence</IRI>
+        <Literal>Intelligence is one of the three primary attributes with the theme of improving spell-casting. It grants mana, mana regeneration and spell damage amplification to every hero. Intelligence heroes also gain attack damage per point of intelligence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Matchmaking</IRI>
         <Literal>The automated system that finds and matches players together</Literal>
     </AnnotationAssertion>
@@ -1220,6 +1235,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Setting</IRI>
         <Literal>Game settings allow users to change display, audio, and hotkeys.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Strength</IRI>
+        <Literal>Strength is one of the three primary attributes with the theme of defending against magic damage. It grants health, health regeneration, and magic resistance to every hero. Strength heroes also gain attack damage per point of strength.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
