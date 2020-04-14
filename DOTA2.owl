@@ -934,6 +934,10 @@
         <Class IRI="#Intelligence"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Agility"/>
+        <Class IRI="#Strength"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#All_Pick"/>
         <Class IRI="#Random_Draft"/>
         <Class IRI="#Turbo"/>
@@ -1012,6 +1016,10 @@
         <Class IRI="#Hero"/>
         <Class IRI="#Item"/>
         <Class IRI="#Mechanic"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Intelligence"/>
+        <Class IRI="#Strength"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Jungle"/>
@@ -1277,6 +1285,11 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#After-game_Analysis</IRI>
+        <Literal>An analysis including the overview, scoreboard and graphs of the match.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Agility</IRI>
         <Literal>Agility is one of the three primary attributes that grants movement and attack speed and armor to every hero. Agility heroes also gain attack damage per point of agility.</Literal>
     </AnnotationAssertion>
@@ -1297,8 +1310,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BackPack</IRI>
+        <Literal>The backpack has 3 back up slots to put items (excluding nerutral items) and the items in the backpack are temporarily invalid.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Basic_Item</IRI>
         <Literal>Basic items are low tier items that sold in base shops and secret shops. Basic items can be combined to be upgrade item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Classic</IRI>
+        <Literal>Classic ranked games including ranked All pick and Random draft game mode.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1319,6 +1342,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Gaming_content</IRI>
         <Literal>In-game content. Involving heroes,items and mechanics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Health</IRI>
+        <Literal>Health indicates units&apos; continued ability to function. When the health point reaches 0, the unit &apos;dies&apos; in the game.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1352,8 +1380,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Neutral_Item</IRI>
+        <Literal>Items that may appear after killing neutral creeps.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Neutral_Item_Slot</IRI>
+        <Literal>One single slot to equip the neutral item.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Non-gaming_content</IRI>
         <Literal>Non-in-game content, involving player community content, matchmaking methods and game settings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Normal_Item_Slot</IRI>
+        <Literal>6 slots that unit can equip 6 items (excluding neutral items)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1364,6 +1407,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Ranked</IRI>
         <Literal>Ranked matchmaking allows players to earn a seasonal ranking, along with a badge that can be displayed next to the profile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role_queue</IRI>
+        <Literal>Players could choose their roles in the queue to start the ranked game.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
