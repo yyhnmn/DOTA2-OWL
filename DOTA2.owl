@@ -346,6 +346,9 @@
         <Class IRI="#World_Mechanic"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasMechanic"/>
     </Declaration>
     <Declaration>
@@ -356,6 +359,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasWorldMechanic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#provideBonusAttribute"/>
@@ -382,16 +388,34 @@
         <DataProperty IRI="#plusIntelligence"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#plusMainAttribute"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#plusStrength"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#provideArmor"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#provideDamage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provideHealth"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#provideHealthRegen"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#provideMana"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provideManaRegen"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#provideMoveSpeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Agility"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Anti-Mage"/>
@@ -430,6 +454,9 @@
         <NamedIndividual IRI="#HealingSalve"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Intelligence"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Invoker"/>
     </Declaration>
     <Declaration>
@@ -458,6 +485,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Satanic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Strength"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VanGuard"/>
@@ -554,6 +584,13 @@
     <SubClassOf>
         <Class IRI="#Basic_Item"/>
         <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Basic_Item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComponentOf"/>
+            <Class IRI="#Upgrade_Item"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BottomLane"/>
@@ -939,6 +976,13 @@
         <Class IRI="#Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Upgrade_Item"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasComponent"/>
+            <Class IRI="#Basic_Item"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Weapon_Item"/>
         <Class IRI="#Upgrade_Item"/>
     </SubClassOf>
@@ -1070,6 +1114,10 @@
         <Class IRI="#Unranked"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hero"/>
         <NamedIndividual IRI="#Anti-Mage"/>
     </ClassAssertion>
@@ -1118,6 +1166,10 @@
         <NamedIndividual IRI="#HealingSalve"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#Intelligence"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hero"/>
         <NamedIndividual IRI="#Invoker"/>
     </ClassAssertion>
@@ -1158,6 +1210,10 @@
         <NamedIndividual IRI="#Satanic"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#Strength"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Armor_Item"/>
         <NamedIndividual IRI="#VanGuard"/>
     </ClassAssertion>
@@ -1169,10 +1225,80 @@
         <Class IRI="#Magical_Item"/>
         <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Agility"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#DragonKnight"/>
+        <NamedIndividual IRI="#Strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#DrowRanger"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#EarthShaker"/>
+        <NamedIndividual IRI="#Strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#EmberSpirit"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Invoker"/>
+        <NamedIndividual IRI="#Intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <NamedIndividual IRI="#IronBranch"/>
+        <NamedIndividual IRI="#MagicWand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Juggernaut"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComponent"/>
+        <NamedIndividual IRI="#MagicWand"/>
+        <NamedIndividual IRI="#IronBranch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Oracle"/>
+        <NamedIndividual IRI="#Intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Phoenix"/>
+        <NamedIndividual IRI="#Strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#VoidSpirit"/>
+        <NamedIndividual IRI="#Intelligence"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusMainAttribute"/>
+        <NamedIndividual IRI="#Apex"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#provideMoveSpeed"/>
         <NamedIndividual IRI="#BootsOfSpeed"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideArmor"/>
+        <NamedIndividual IRI="#Buckler"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#provideArmor"/>
@@ -1189,6 +1315,25 @@
         <NamedIndividual IRI="#IronBranch"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusAllAttributes"/>
+        <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideHealth"/>
+        <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">175</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideMana"/>
+        <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">175</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -1200,6 +1345,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <ObjectProperty IRI="#hasMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#provideBonusAttribute"/>
@@ -1295,6 +1444,10 @@
         <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#plusMainAttribute"/>
+        <DataProperty IRI="#plusAttribute"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#plusStrength"/>
         <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
@@ -1303,7 +1456,23 @@
         <DataProperty IRI="#hasItemFunction"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#provideDamage"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideHealth"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#provideHealthRegen"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideMana"/>
+        <DataProperty IRI="#hasItemFunction"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provideManaRegen"/>
         <DataProperty IRI="#hasItemFunction"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -1602,6 +1771,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#World_Mechanic</IRI>
         <Literal>Mechanics used in the world of game.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aghanim&apos;sScepter</IRI>
+        <Literal>Upgrade the ultimate or other abilities of heroes.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
