@@ -256,9 +256,6 @@
         <Class IRI="#River"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Role"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Role_queue"/>
     </Declaration>
     <Declaration>
@@ -373,7 +370,22 @@
         <ObjectProperty IRI="#soldBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasBasicDamage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBasicHealth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBasicMana"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGoldValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasItemData"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnitData"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#plusAgility"/>
@@ -602,7 +614,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Building"/>
-        <Class IRI="#World_Mechanic"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnitMechanic"/>
+            <Class IRI="#Unit_Mechanic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Classic"/>
@@ -843,16 +862,19 @@
         <Class IRI="#Map"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Role"/>
-        <Class IRI="#Gameplay"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Role_queue"/>
         <Class IRI="#Ranked"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rune"/>
         <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rune"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnitMechanic"/>
+            <Class IRI="#Unit_Mechanic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Secret_Shop"/>
@@ -1084,8 +1106,27 @@
         <Class IRI="#Power-up_Rune"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Building"/>
+        <Class IRI="#Experience"/>
+        <Class IRI="#Gold"/>
+        <Class IRI="#Map"/>
+        <Class IRI="#Rune"/>
+        <Class IRI="#Shop"/>
+        <Class IRI="#Time"/>
+        <Class IRI="#Tree"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Classic"/>
         <Class IRI="#Role_queue"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Game_Mode"/>
+        <Class IRI="#HeroState"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Gameplay"/>
+        <Class IRI="#Unit_Mechanic"/>
+        <Class IRI="#World_Mechanic"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Gaming_content"/>
@@ -1428,6 +1469,10 @@
         <ObjectProperty IRI="#hasWorldMechanic"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#sellItem"/>
         <ObjectProperty IRI="#soldBy"/>
     </InverseObjectProperties>
@@ -1440,6 +1485,10 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#sellItem"/>
     </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#Upgrade_Item"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMechanic"/>
         <Class IRI="#Hero"/>
@@ -1455,6 +1504,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class IRI="#Basic_Item"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#provideBonusAttribute"/>
@@ -1469,6 +1522,10 @@
         <Class IRI="#Item"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#Basic_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMechanic"/>
         <Class IRI="#Mechanic"/>
     </ObjectPropertyRange>
@@ -1479,6 +1536,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasWorldMechanic"/>
         <Class IRI="#World_Mechanic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class IRI="#Upgrade_Item"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#provideBonusAttribute"/>
@@ -1493,6 +1554,22 @@
         <Class IRI="#Shop"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasBasicDamage"/>
+        <DataProperty IRI="#hasUnitData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBasicHealth"/>
+        <DataProperty IRI="#hasUnitData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBasicMana"/>
+        <DataProperty IRI="#hasUnitData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasGoldValue"/>
+        <DataProperty IRI="#hasItemData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#plusAgility"/>
         <DataProperty IRI="#plusAttribute"/>
     </SubDataPropertyOf>
@@ -1502,7 +1579,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#plusAttribute"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#plusIntelligence"/>
@@ -1518,40 +1595,53 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideArmor"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideDamage"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideHealth"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideHealthRegen"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideMana"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideManaRegen"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#provideMoveSpeed"/>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
         <Class IRI="#Item"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUnitData"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#hasItemFunction"/>
+        <DataProperty IRI="#hasItemData"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUnitData"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Affiliated_Creep</IRI>
+        <Literal>Creeps that are auto-generated by barracks for each team. Always pushing the lane.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#After-game_Analysis</IRI>
@@ -1669,6 +1759,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gold</IRI>
+        <Literal>Heroes have a gold value. Heroes get gold by killing creeps. Items have gold values and are bought by gold.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Health</IRI>
         <Literal>Health indicates units&apos; continued ability to function. When the health point reaches 0, the unit &apos;dies&apos; in the game.</Literal>
     </AnnotationAssertion>
@@ -1734,6 +1829,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Neutral_Creep</IRI>
+        <Literal>Creeps that generated each minute in jungle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Neutral_Item</IRI>
         <Literal>Items that may appear after killing neutral creeps.</Literal>
     </AnnotationAssertion>
@@ -1766,11 +1866,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Ranked</IRI>
         <Literal>Ranked matchmaking allows players to earn a seasonal ranking, along with a badge that can be displayed next to the profile.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Role</IRI>
-        <Literal>Hero&apos;s role in his team.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1835,7 +1930,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#World_Mechanic</IRI>
-        <Literal>Mechanics used in the world of game.</Literal>
+        <Literal>Mechanics used in the uncontrolleable world elements of game.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
