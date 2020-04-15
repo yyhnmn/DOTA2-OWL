@@ -73,6 +73,9 @@
         <Class IRI="#Basic_Item"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BottomLane"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Bounty_Rune"/>
     </Declaration>
     <Declaration>
@@ -86,6 +89,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Cosmetic_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Courier"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Creep"/>
@@ -110,6 +116,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Evasion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experience"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Farming"/>
@@ -145,6 +154,9 @@
         <Class IRI="#Hero"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#HeroState"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Hotkey"/>
     </Declaration>
     <Declaration>
@@ -167,9 +179,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Jungle"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Jungling"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Lane"/>
@@ -197,6 +206,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Melee_Creep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MidLane"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Miscellaneous_Item"/>
@@ -302,6 +314,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopLane"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Tower"/>
@@ -541,6 +556,10 @@
         <Class IRI="#Item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BottomLane"/>
+        <Class IRI="#Lane"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Bounty_Rune"/>
         <Class IRI="#Rune"/>
     </SubClassOf>
@@ -559,6 +578,10 @@
     <SubClassOf>
         <Class IRI="#Cosmetic_Item"/>
         <Class IRI="#Non-gaming_content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Courier"/>
+        <Class IRI="#Unit"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Creep"/>
@@ -593,8 +616,12 @@
         <Class IRI="#Defense_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Experience"/>
+        <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Farming"/>
-        <Class IRI="#Gameplay"/>
+        <Class IRI="#HeroState"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fountain"/>
@@ -610,7 +637,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ganking"/>
-        <Class IRI="#Gameplay"/>
+        <Class IRI="#HeroState"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gold"/>
@@ -631,6 +658,10 @@
     <SubClassOf>
         <Class IRI="#Hero"/>
         <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeroState"/>
+        <Class IRI="#Gameplay"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hotkey"/>
@@ -679,10 +710,6 @@
         <Class IRI="#Map"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Jungling"/>
-        <Class IRI="#Gameplay"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Lane"/>
         <Class IRI="#Map"/>
     </SubClassOf>
@@ -719,6 +746,10 @@
         <Class IRI="#Affiliated_Creep"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MidLane"/>
+        <Class IRI="#Lane"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Miscellaneous_Item"/>
         <Class IRI="#Basic_Item"/>
     </SubClassOf>
@@ -752,7 +783,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pushing"/>
-        <Class IRI="#Gameplay"/>
+        <Class IRI="#HeroState"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Random_Draft"/>
@@ -860,6 +891,10 @@
     <SubClassOf>
         <Class IRI="#Time"/>
         <Class IRI="#World_Mechanic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TopLane"/>
+        <Class IRI="#Lane"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tower"/>
@@ -1300,8 +1335,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Armor_Item</IRI>
+        <Literal>Upgrade items that provide armor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attack_Mechanic</IRI>
+        <Literal>Mechanics about attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Attribute</IRI>
         <Literal>Baseline stats that increase with each level. Strength increases health, health regeneration and magic resistance, Agility increases armor, attack speed and move speed, Intelligence increases mana, mana regeneration, and spell amplification. All heroes are associated with one of three attributes, known as their Primary Attribute. Raising a hero&apos;s Primary Attribute also raises their physical attack damage. Attributes can also be increased by items and abilities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attribute_Item</IRI>
+        <Literal>Basic items that could increase attributes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1320,8 +1370,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building</IRI>
+        <Literal>Buildings are a type unit that are not controlled by any player. At the beginning of each match, a set of buildings spawn at set locations for both teams. Both factions have the same set of buildings, with only their appearance differing from each other. Buildings take mostly defensive roles and are the main objective of the game.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Classic</IRI>
         <Literal>Classic ranked games including ranked All pick and Random draft game mode.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Consumable_Item</IRI>
+        <Literal>Items that are consumable to provide extra health regen, mana regen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1330,8 +1390,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Courier</IRI>
+        <Literal>A special unit owned by each team that holds and delivers items to players.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Creep</IRI>
+        <Literal>Creeps are basic units in Dota 2. Every unit which is not a hero, building, ward or courier is considered a creep.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Defense_Mechanic</IRI>
+        <Literal>Mechanics about defense.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Display</IRI>
         <Literal>Video display of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Equipment_Item</IRI>
+        <Literal>Basic items that provide damage or armor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Farming</IRI>
+        <Literal>Kill creeps to get gold and experience.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1345,6 +1430,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ganking</IRI>
+        <Literal>Kill enemy heroes to establish advantages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Health</IRI>
         <Literal>Health indicates units&apos; continued ability to function. When the health point reaches 0, the unit &apos;dies&apos; in the game.</Literal>
     </AnnotationAssertion>
@@ -1355,8 +1445,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HeroState</IRI>
+        <Literal>States of heroes in the game.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Hotkey</IRI>
         <Literal>Hotkeys setting of the game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Illusion</IRI>
+        <Literal>Copies of heroes that are generated by abilities, items, or runes. Illusions come in different types, and possess lesser properties of the original hero.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1370,6 +1470,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Item_Slot</IRI>
+        <Literal>Heroes have item slots to put items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Magical_Item</IRI>
+        <Literal>Upgrade items that relate to magic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Map</IRI>
+        <Literal>The battlefield where Dota 2 matches takes place. Three Lanes are present on the map, and lead into each team&apos;s base. In between the lanes are wooded areas known as the Jungle. A river runs from the upper left part to the lower right part of the map.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Matchmaking</IRI>
         <Literal>The automated system that finds and matches players together</Literal>
     </AnnotationAssertion>
@@ -1377,6 +1492,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Mechanic</IRI>
         <Literal>Mechanics are the inner workings of Dota 2.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Miscellaneous_Item</IRI>
+        <Literal>Items that provide special abilities.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1400,6 +1520,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pushing</IRI>
+        <Literal>Push enemy towers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Random_Draft</IRI>
         <Literal>Each team takes turns selecting a hero from a shared pool of 50 random heros.</Literal>
     </AnnotationAssertion>
@@ -1410,8 +1535,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role</IRI>
+        <Literal>Hero&apos;s role in his team.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Role_queue</IRI>
         <Literal>Players could choose their roles in the queue to start the ranked game.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rune</IRI>
+        <Literal>Special boosters that spawn on the map. Runes give extra gold  to heroes who pick them up, as well as a variety of power-up effects.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1420,8 +1555,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shop</IRI>
+        <Literal>Stores scattered across the map that sell items to heroes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Strength</IRI>
         <Literal>Strength is one of the three primary attributes with the theme of defending against magic damage. It grants health, health regeneration, and magic resistance to every hero. Strength heroes also gain attack damage per point of strength.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Summon</IRI>
+        <Literal>Units that are created by heroes to aid them in combat.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1442,6 +1587,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Unranked</IRI>
         <Literal>Nomal games without showing players&apos; rankings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Upgrade_Item</IRI>
+        <Literal>Upgrade_items are higher level items that composed of basic items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Weapon_Item</IRI>
+        <Literal>Upgrade items that provide damage.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
