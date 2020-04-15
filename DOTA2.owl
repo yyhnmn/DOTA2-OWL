@@ -1306,6 +1306,21 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#provideDamage"/>
+        <NamedIndividual IRI="#Crystalys"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusIntelligence"/>
+        <NamedIndividual IRI="#EssenceRing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideManaRegen"/>
+        <NamedIndividual IRI="#EssenceRing"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#provideHealthRegen"/>
         <NamedIndividual IRI="#HealingSalve"/>
         <Literal>50/s for 8s</Literal>
@@ -1314,6 +1329,56 @@
         <DataProperty IRI="#plusAllAttributes"/>
         <NamedIndividual IRI="#IronBranch"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusAllAttributes"/>
+        <NamedIndividual IRI="#MagicWand"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusAgility"/>
+        <NamedIndividual IRI="#NinjaGear"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideMoveSpeed"/>
+        <NamedIndividual IRI="#NinjaGear"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideDamage"/>
+        <NamedIndividual IRI="#PaladinSword"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <NamedIndividual IRI="#RoyalJelly"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideManaRegen"/>
+        <NamedIndividual IRI="#RoyalJelly"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plusStrength"/>
+        <NamedIndividual IRI="#Satanic"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideDamage"/>
+        <NamedIndividual IRI="#Satanic"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideHealth"/>
+        <NamedIndividual IRI="#VanGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <NamedIndividual IRI="#VanGuard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#plusAllAttributes"/>
