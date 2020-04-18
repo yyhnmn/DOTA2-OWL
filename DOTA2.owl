@@ -1273,6 +1273,11 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <NamedIndividual IRI="#Anti-Mage"/>
+        <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <NamedIndividual IRI="#DragonKnight"/>
         <NamedIndividual IRI="#Strength"/>
     </ObjectPropertyAssertion>
@@ -1659,6 +1664,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ancient</IRI>
+        <Literal>Ancients are massive structures found inside each faction&apos;s base and are the main objective. In order to win, the enemy team&apos;s Ancient must be destroyed, while the own one must be kept alive.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Armor_Item</IRI>
         <Literal>Upgrade items that provide armor.</Literal>
     </AnnotationAssertion>
@@ -1686,6 +1696,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#BackPack</IRI>
         <Literal>The backpack has 3 back up slots to put items (excluding nerutral items) and the items in the backpack are temporarily invalid.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Barrack</IRI>
+        <Literal>There are two Barracks for each lane per faction - one for melee creeps (called Melee Barracks or Melee Rax), and one for ranged creeps (called Ranged Barracks or Ranged Rax).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1734,6 +1749,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Effigy_Building</IRI>
+        <Literal>All effigy buildings have a vision range of 900 during the day and 600 during the night. They cannot attack, have no special abilities and have no True Sight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Equipment_Item</IRI>
         <Literal>Basic items that provide damage or armor.</Literal>
     </AnnotationAssertion>
@@ -1741,6 +1761,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Farming</IRI>
         <Literal>Kill creeps to get gold and experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fountain</IRI>
+        <Literal>Fountains are buildings located in the respawn areas of both bases, and provide scaling health and mana regeneration to all allied units near it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1824,6 +1849,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Melee_Creep</IRI>
+        <Literal>Creeps that use melee weapons. Strengthened after enemy&apos;s Barrack destroyed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Miscellaneous_Item</IRI>
         <Literal>Items that provide special abilities.</Literal>
     </AnnotationAssertion>
@@ -1854,6 +1884,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Outpost</IRI>
+        <Literal>Outposts start out belonging to the team on their side, and can be captured by the enemy at any time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Pushing</IRI>
         <Literal>Push enemy towers.</Literal>
     </AnnotationAssertion>
@@ -1861,6 +1896,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Random_Draft</IRI>
         <Literal>Each team takes turns selecting a hero from a shared pool of 50 random heros.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ranged_Creep</IRI>
+        <Literal>Creeps that use ranged weapons. Strengthened after enemy&apos;s Barrack destroyed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1896,6 +1936,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Summon</IRI>
         <Literal>Units that are created by heroes to aid them in combat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tower</IRI>
+        <Literal>Towers are the main line of defense for both teams, attacking any non-neutral enemy that gets within their range.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
