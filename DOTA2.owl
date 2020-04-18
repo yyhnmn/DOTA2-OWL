@@ -12,6 +12,14 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This ontology is a beginning ontology, or possible ontology template, for the gaming and non-gaming content of the popular online multiplayer video game DOTA 2.  
+
+These sections are not complete (and of course no ontology is ever complete), but this ontology is designed as a proof-of-concept construction for a video game ontology. 
+
+This ontology mainly focuses on item section and hero section.</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="#Accessorie_Item"/>
     </Declaration>
@@ -1463,7 +1471,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#provideBonusAttribute"/>
-        <ObjectProperty IRI="#hasUnitMechanic"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#sellItem"/>
@@ -1503,12 +1511,20 @@
         <Class IRI="#Item"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasUnitMechanic"/>
         <Class IRI="#Hero"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasWorldMechanic"/>
-        <Class IRI="#Hero"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+        <Class IRI="#Unit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isComponentOf"/>
@@ -1533,6 +1549,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMechanic"/>
         <Class IRI="#Mechanic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrimaryAttribute"/>
+        <Class IRI="#Attribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -1627,6 +1647,26 @@
         <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasBasicDamage"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBasicHealth"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBasicMana"/>
+        <Class IRI="#Unit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGoldValue"/>
+        <Class IRI="#Basic_Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGoldValue"/>
+        <Class IRI="#Upgrade_Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasItemData"/>
         <Class IRI="#Item"/>
     </DataPropertyDomain>
@@ -1634,12 +1674,92 @@
         <DataProperty IRI="#hasUnitData"/>
         <Class IRI="#Unit"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#plusAttribute"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideArmor"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideDamage"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideHealth"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideMana"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideManaRegen"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provideMoveSpeed"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBasicDamage"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBasicHealth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBasicMana"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGoldValue"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasItemData"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasUnitData"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#plusAttribute"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideArmor"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideDamage"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideHealth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideHealthRegen"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideMana"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideManaRegen"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#provideMoveSpeed"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <AnnotationAssertion>
