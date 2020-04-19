@@ -204,7 +204,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Mana_Regen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Matchmaking"/>
@@ -229,6 +229,9 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="#Neutral_Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neutral_Item_Appear_Time"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Neutral_Item_Slot"/>
@@ -351,13 +354,37 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#World_Mechanic"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#coudActivateRune"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#couldEquipItem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equipedIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCosmeticItem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExperience"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGold"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMechanic"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTree"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -376,6 +403,9 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#soldBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAppearTime"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasBasicDamage"/>
@@ -444,6 +474,9 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <NamedIndividual IRI="#Apex"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Blink"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BootsOfSpeed"/>
     </Declaration>
     <Declaration>
@@ -451,6 +484,9 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChainMail"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CounterSpell"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Crystalys"/>
@@ -489,6 +525,12 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <NamedIndividual IRI="#MagicWand"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ManaBreak"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ManaVoid"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#NinjaGear"/>
     </Declaration>
     <Declaration>
@@ -518,6 +560,41 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <Declaration>
         <NamedIndividual IRI="#Aghanim&apos;sScepter"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Basic_Item"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isComponentOf"/>
+            <Class IRI="#Upgrade_Item"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hero"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCosmeticItem"/>
+            <Class IRI="#Cosmetic_Item"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Item"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#soldBy"/>
+            <Class IRI="#Shop"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Shop"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#sellItem"/>
+            <Class IRI="#Item"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Upgrade_Item"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasComponent"/>
+            <Class IRI="#Basic_Item"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Accessorie_Item"/>
         <Class IRI="#Upgrade_Item"/>
@@ -606,13 +683,6 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Item"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Basic_Item"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isComponentOf"/>
-            <Class IRI="#Upgrade_Item"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#BottomLane"/>
         <Class IRI="#Lane"/>
     </SubClassOf>
@@ -623,13 +693,6 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <SubClassOf>
         <Class IRI="#Building"/>
         <Class IRI="#Unit"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Building"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasUnitMechanic"/>
-            <Class IRI="#Unit_Mechanic"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Classic"/>
@@ -759,23 +822,16 @@ This ontology mainly focuses on item section and hero section.</Literal>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Item"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#soldBy"/>
-            <Class IRI="#Shop"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Item_Slot"/>
         <Class IRI="#Unit_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Jungle"/>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lane"/>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Magic_Resist"/>
@@ -794,7 +850,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Attack_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
         <Class IRI="#World_Mechanic"/>
     </SubClassOf>
     <SubClassOf>
@@ -828,6 +884,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <SubClassOf>
         <Class IRI="#Neutral_Item"/>
         <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neutral_Item_Appear_Time"/>
+        <Class IRI="#Time"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Neutral_Item_Slot"/>
@@ -867,7 +927,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#River"/>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Role_queue"/>
@@ -895,13 +955,6 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <SubClassOf>
         <Class IRI="#Shop"/>
         <Class IRI="#World_Mechanic"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Shop"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#sellItem"/>
-            <Class IRI="#Item"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spell"/>
@@ -969,7 +1022,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tree"/>
-        <Class IRI="#World_Mechanic"/>
+        <Class IRI="#MapElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Turbo"/>
@@ -1004,13 +1057,6 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <SubClassOf>
         <Class IRI="#Upgrade_Item"/>
         <Class IRI="#Item"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Upgrade_Item"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasComponent"/>
-            <Class IRI="#Basic_Item"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Weapon_Item"/>
@@ -1117,7 +1163,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Building"/>
         <Class IRI="#Experience"/>
         <Class IRI="#Gold"/>
-        <Class IRI="#Map"/>
+        <Class IRI="#MapElement"/>
         <Class IRI="#Rune"/>
         <Class IRI="#Shop"/>
         <Class IRI="#Time"/>
@@ -1175,6 +1221,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <NamedIndividual IRI="#Apex"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Spell"/>
+        <NamedIndividual IRI="#Blink"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Miscellaneous_Item"/>
         <NamedIndividual IRI="#BootsOfSpeed"/>
     </ClassAssertion>
@@ -1185,6 +1235,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <ClassAssertion>
         <Class IRI="#Equipment_Item"/>
         <NamedIndividual IRI="#ChainMail"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Spell"/>
+        <NamedIndividual IRI="#CounterSpell"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Weapon_Item"/>
@@ -1235,6 +1289,14 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <NamedIndividual IRI="#MagicWand"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Spell"/>
+        <NamedIndividual IRI="#ManaBreak"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Spell"/>
+        <NamedIndividual IRI="#ManaVoid"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Tier4NeutralItem"/>
         <NamedIndividual IRI="#NinjaGear"/>
     </ClassAssertion>
@@ -1283,6 +1345,26 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <NamedIndividual IRI="#Anti-Mage"/>
         <NamedIndividual IRI="#Agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpell"/>
+        <NamedIndividual IRI="#Anti-Mage"/>
+        <NamedIndividual IRI="#Blink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpell"/>
+        <NamedIndividual IRI="#Anti-Mage"/>
+        <NamedIndividual IRI="#CounterSpell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpell"/>
+        <NamedIndividual IRI="#Anti-Mage"/>
+        <NamedIndividual IRI="#ManaBreak"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSpell"/>
+        <NamedIndividual IRI="#Anti-Mage"/>
+        <NamedIndividual IRI="#ManaVoid"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
@@ -1450,12 +1532,40 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">175</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#coudActivateRune"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#couldEquipItem"/>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#equipedIn"/>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasExperience"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGold"/>
         <ObjectProperty IRI="#hasWorldMechanic"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <ObjectProperty IRI="#hasUnitMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSpell"/>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTree"/>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -1490,17 +1600,59 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <ObjectProperty IRI="#soldBy"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasUnitMechanic"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasWorldMechanic"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#sellItem"/>
     </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCosmeticItem"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasMechanic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasCosmeticItem"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasMechanic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasUnitMechanic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasWorldMechanic"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coudActivateRune"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#couldEquipItem"/>
+        <Class IRI="#Item_Slot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#equipedIn"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasComponent"/>
         <Class IRI="#Upgrade_Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCosmeticItem"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExperience"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGold"/>
+        <Class IRI="#Hero"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMechanic"/>
@@ -1515,8 +1667,16 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Hero"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpell"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTree"/>
+        <Class IRI="#MapElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasUnitMechanic"/>
-        <Class IRI="#Hero"/>
+        <Class IRI="#Unit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasWorldMechanic"/>
@@ -1543,8 +1703,32 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <Class IRI="#Item"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#coudActivateRune"/>
+        <Class IRI="#Rune"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#couldEquipItem"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equipedIn"/>
+        <Class IRI="#Item_Slot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComponent"/>
         <Class IRI="#Basic_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCosmeticItem"/>
+        <Class IRI="#Cosmetic_Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExperience"/>
+        <Class IRI="#Experience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGold"/>
+        <Class IRI="#Gold"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMechanic"/>
@@ -1553,6 +1737,14 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPrimaryAttribute"/>
         <Class IRI="#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpell"/>
+        <Class IRI="#Spell"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTree"/>
+        <Class IRI="#Tree"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasUnitMechanic"/>
@@ -1578,6 +1770,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <ObjectProperty IRI="#soldBy"/>
         <Class IRI="#Shop"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAppearTime"/>
+        <DataProperty IRI="#hasItemData"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasBasicDamage"/>
         <DataProperty IRI="#hasUnitData"/>
@@ -1647,6 +1843,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <DataProperty IRI="#hasItemData"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasAppearTime"/>
+        <Class IRI="#Neutral_Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasBasicDamage"/>
         <Class IRI="#Unit"/>
     </DataPropertyDomain>
@@ -1706,6 +1906,10 @@ This ontology mainly focuses on item section and hero section.</Literal>
         <DataProperty IRI="#provideMoveSpeed"/>
         <Class IRI="#Item"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAppearTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasBasicDamage"/>
         <Datatype abbreviatedIRI="xsd:float"/>
@@ -1954,7 +2158,7 @@ This ontology mainly focuses on item section and hero section.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Map</IRI>
+        <IRI>#MapElement</IRI>
         <Literal>The battlefield where Dota 2 matches takes place. Three Lanes are present on the map, and lead into each team&apos;s base. In between the lanes are wooded areas known as the Jungle. A river runs from the upper left part to the lower right part of the map.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1985,7 +2189,12 @@ This ontology mainly focuses on item section and hero section.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Neutral_Item</IRI>
-        <Literal>Items that may appear after killing neutral creeps.</Literal>
+        <Literal>Items that may appear after killing neutral creeps.
+Tier 1 item appears after min 7
+Tier 2 item appears after min 15
+Tier 3 item appears after min 25
+Tier 4 item appears after min 35
+Tier 5 item appears after min 60</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
