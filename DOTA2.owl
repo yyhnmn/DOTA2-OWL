@@ -2308,6 +2308,91 @@ Tier 5 item appears after min 60</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#coudActivateRune</IRI>
+        <Literal>Heros can activate runes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#couldEquipItem</IRI>
+        <Literal>Some units have item slots which could equip items</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#equipedIn</IRI>
+        <Literal>Items are equiped in item slots.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasComponent</IRI>
+        <Literal>Upgrade items are synthesized from basic items, and upgrade items has basic items as their components.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCosmeticItem</IRI>
+        <Literal>Heros can wear various cosmetic items to change their outlooks.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasExperience</IRI>
+        <Literal>Heros have experience bar and they can level up if exp bar is full. Heros have a max level of 30.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGold</IRI>
+        <Literal>Heros have gold.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMechanic</IRI>
+        <Literal>Items and heros have some game mechanics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPrimaryAttribute</IRI>
+        <Literal>Each hero has one primary attribute. (strength, agility, intelligence )</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSpell</IRI>
+        <Literal>Units have spells. (passive or active)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTree</IRI>
+        <Literal>There are thousands of trees in the map as a map element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasUnitMechanic</IRI>
+        <Literal>Units have specific unit mechanics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWorldMechanic</IRI>
+        <Literal>Units and items have some mechanics to interact with the game world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isComponentOf</IRI>
+        <Literal>Basic items are components of upgrade items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#provideBonusAttribute</IRI>
+        <Literal>Attribute items could provide bonus attributes to heros.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sellItem</IRI>
+        <Literal>Shops sell items.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#soldBy</IRI>
+        <Literal>Items are sold by shops.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Aghanim&apos;sScepter</IRI>
         <Literal>Upgrade the ultimate or other abilities of heroes.</Literal>
     </AnnotationAssertion>
