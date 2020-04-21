@@ -2359,7 +2359,7 @@ Tier 5 item appears after min 60</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasTree</IRI>
-        <Literal>There are thousands of trees in the map as a map element.</Literal>
+        <Literal>There are hundreds of trees in the map as a map element.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
